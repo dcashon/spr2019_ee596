@@ -6,4 +6,8 @@ Iris data: see Jupyter notebook file
 
 MNIST:
 
-See ee596_hw1.pdf
+See: 
+ee596_hw1.pdf
+HW1_MNIST.ipynb 
+HW1_mnist_function.py 	
+HW1_mnist_vary.py
