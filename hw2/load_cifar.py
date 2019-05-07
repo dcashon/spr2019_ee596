@@ -207,7 +207,7 @@ def mini_batch(features,labels,mini_batch_size):
         counter += 1
         start_idx = counter * mini_batch_size
         end_idx = counter * mini_batch_size + mini_batch_size
-    #yield 1 # this is so I know when batch done
+
 # Step 11: define a function to load preprocessed training batch, the function will call the mini_batch() function
 def load_preprocessed_training_batch(batch_id,mini_batch_size):
     """
