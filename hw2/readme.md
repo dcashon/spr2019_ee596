@@ -13,7 +13,7 @@ Plots of performance using batch sizes [16, 64, 256, 1024] on MNIST are found in
 
 HW2_NumpyNet_BatchGD_ADAM_Tflow.ipynb
 
-### Problem 2
+### Problem 2:
 
 See:
 
