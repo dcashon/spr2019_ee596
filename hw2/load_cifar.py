@@ -242,12 +242,11 @@ def load_preprocessed_validation_batch():
     return features, labels
 
 # Step 13: load preprocessed test batch
-def load_preprocessed_test_batch(test_mini_batch_size):
+def load_preprocessed_test_batch():
     file_name = 'test_processed.pkl'
     with open(file_name, 'rb') as foo:
         d1 = pickle.load(foo)
     features = d1['data']
     labels = d1['labels_onehot']
 
-    return mini_batch(features,labels,test_mini_batch_size)
-
+    return features, labels
