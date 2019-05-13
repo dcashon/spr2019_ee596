@@ -1,5 +1,8 @@
 ## EE596: Practical Introduction to Neural Nets Homework 2
 
+## Notes
+All training was done using either a local 1050 Ti or Tesla P100 gpu on mox.hyak nodes.
+
 ### Problem 1:
 Single fully connected hidden layer is implemented in a class inside:
 
@@ -22,5 +25,23 @@ load_cifar.py
 For functions that process the CIFAR10 dataset. The neural network used is found in:
 
 HW2_4b.ipynb
+
+### Problem 3:
+
+LeNet-5 on MNIST:
+
+HW2_3a.ipynb
+
+On CIFAR-10:
+
+HW2_3b.ipynb
+
+### Problem 4:
+
+Functions reused from other problems and found in:
+
+
+
+
 
 
