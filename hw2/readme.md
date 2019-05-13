@@ -38,7 +38,14 @@ HW2_3b.ipynb
 
 ### Problem 4:
 
-Functions reused from other problems and found in:
+Preprocessing:
+
+HW2_4a.ipynb
+load_dc.py
+
+AlexNet:
+
+HW2_4b.ipynb
 
 
 
