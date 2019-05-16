@@ -1,0 +1,5 @@
+Questions
+
+1.
+	1) What is the point of the suggestion of using model.image?
+	2) Check saliency images (reddd???) with Ryan/Elise
