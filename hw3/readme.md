@@ -21,3 +21,5 @@ hw3_3.ipynb
 See
 
 hw3_4.ipynb
+char_rnn_model.py
+text_utils.py
