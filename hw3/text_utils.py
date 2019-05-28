@@ -108,7 +108,7 @@ class TextLoader():
 
 
     def validation_batch(self):
-        #TODO
+        # dont need to do this
         return 0
     
     def training_batch(self, batch_size):

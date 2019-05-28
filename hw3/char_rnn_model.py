@@ -68,7 +68,7 @@ class Model():
 
         # construct the graph
         self.X = tf.placeholder(tf.float32, shape=[None, self.num_steps, self.num_inputs])
-        self.Y = tf.placeholder(tf.float32, shape=[None, self.num_inputs])
+        self.Y = tf.placeholder(tf.float32, shape=[None, self.num_steps, self.num_inputs])
 
         # RNN
         if self.use_gpu:
@@ -84,10 +84,15 @@ class Model():
             self.multi_layer_cell = tf.contrib.rnn.MultiRNNCell(self.layers)
             
         self.outputs, self.states = tf.nn.dynamic_rnn(self.multi_layer_cell, self.X, dtype=tf.float32)
-         
+        # we use a many to many
+        # output has shape [batch_size, n_steps, num_neurons]
+        # reshape
+        self.output_reshape = tf.reshape(self.outputs, [-1, self.num_neurons])
+        self.stacked_outputs = tf.layers.dense(self.output_reshape, self.vocab_size)
+        self.logits = tf.reshape(self.stacked_outputs, [-1, self.num_steps, self.vocab_size])
         # last output state has a fully connected layer to softmax for character prediction
         # LSTM cell has two outputs, so we need the hidden state of the "top" layer
-        self.logits = tf.layers.dense(self.states[self.num_layers-1][0], self.vocab_size) # one-hot
+        #self.logits = tf.layers.dense(self.states[self.num_layers-1][0], self.vocab_size) # one-hot
 
         # loss and optimizer
         self.loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=self.Y, logits=self.logits))
@@ -98,4 +103,5 @@ class Model():
         return 0
 
     def sample(self):
+        # I implemented this in the Jupyter notebook instead
         return 0
